@@ -1,0 +1,192 @@
+%%%% Better Poster latex template example v1.0 (2019/04/04)
+%%%% GNU General Public License v3.0
+%%%%
+%%%% Tom Kocmi - UFAL
+%%%% https://github.com/tomkocmi/betterposter-latex-template
+%%%%
+%%%% Rafael Bailo
+%%%% https://github.com/rafaelbailo/betterposter-latex-template
+%%%% 
+%%%% Original design from Mike Morrison
+%%%% https://twitter.com/mikemorrison
+
+
+%%%% REMOVE lanscape FOR VERTICAL POSTER
+%\documentclass[a0paper,fleqn,landscape]{betterposter}
+\documentclass[a0paper,fleqn]{betterposter}
+
+
+\gdef\title{The Title of Your Amaizing Paper}
+\gdef\author{Mike Morrison, Rafael Bailo and Tom Kocmi}
+\gdef\email{<surname>@ufal.mff.cuni.cz}
+\gdef\urlQRcode{http://ufal.mff.cuni.cz/}
+\gdef\acknowledgement{Acknowledgements of your paper. This template is based on Mike Morrison's idea of Better Poster. It was modified to latex by Rafael Bailo and modified for UFAL purposes by Tom Kocmi.}
+
+
+\begin{document}	
+\betterposter{
+
+
+%%%%%%%% MAIN COLUMN START
+
+
+\textbf{Main finding} goes here,
+\\translated into \textbf{plain English}.
+\\\textbf{Emphasize} the important!
+
+
+%%%%%%%% MAIN COLUMN END
+}{
+%%%%%%%% LEFT COLUMN START - SECTION FOR PEOPLE TO READ BY THEMSELVES
+
+\section{Introduction}
+This section is for participants to read through by themselves without your 
+interaction. Remember, that you are standing on the right side of the poster, 
+thus on the left side can several people stand and read this section without 
+your interuption.
+
+\vspace*{2.0em}
+
+First specify what was your problem, maybe add some graph or illustration
+\vspace*{2.0em}
+\begin{center}
+% Linear regression
+% Author: Henri Menke
+% Retrieved from: http://www.texample.net/tikz/examples/linear-regression/
+\includegraphics[width=\linewidth]{img/tikzexample1}
+\end{center}
+
+
+
+\section{Methods}
+
+Describe your contribution, what is your main goal. Add explanatory equation, etc.
+
+\begin{equation}
+\int_a^b f(x)\,\mathrm{d}x = F(b)-F(a).
+\end{equation}
+
+\section{Results}
+
+Be brief about your results, maybe list them as individual items. 
+
+\begin{itemize}
+\item The first item.
+\item The second item.
+\item The third item.
+\end{itemize}
+
+
+\vspace*{3.0em}
+
+Note: if you want to scale a graph or something to the full width of a column, use:
+
+\vspace*{1.0em} 
+
+\resizebox{\columnwidth}{!}{YOUR OBJECT}
+
+
+
+%%%%%%%% LEFT COLUMN END
+}{
+%%%%%%%% RIGHT COLUMN START 
+% you can space sections by \vspace*{3.0em}
+
+Here you can add \textbf{supplementary material}. Remember, this section will be 
+right next to you. 
+Use this section for supplementary material that is needed for YOUR oral 
+explanation. Do not care about titles or naming the sections because you will 
+tell the participants what is what.
+
+
+\vspace*{3.0em}
+
+For instance, a table:
+
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{lll}
+ Country Name & ISO ALPHA 2  & ISO ALPHA 3 \\
+ \hline
+ Afghanistan   & AF & AFG \\
+ Aland Islands & AX & ALA \\
+ Albania       & AL & ALB \\
+ Algeria       & DZ & DZA \\
+ American Samoa& AS & ASM \\
+ Andorra       & AD & AND \\
+ Angola        & AO & AGO \\
+ \hline
+\end{tabular}
+}
+
+\vspace*{3.0em}
+
+Or very important and cute kittens:
+\begin{center}
+\includegraphics[width=\textwidth]{img/kittens}
+% Author: Bara Prochazkova
+% Retrieved by Tom Kocmi
+\end{center}
+
+
+
+
+
+
+
+%%%%%%%% RIGHT COLUMN END
+}
+\end{document}
+
+
+
+
+
+
+
+
+%%%% Move the following commands to top to customise the format
+
+%% Setting the width of columns
+% Left column
+%\setlength{\leftbarwidth}{0.25\paperwidth}
+% Right column
+%\setlength{\rightbarwidth}{0.25\paperwidth}
+
+%% Setting the column margins
+% Horizontal margin
+%\setlength{\columnmarginvertical}{0.05\paperheight}
+% Vertical margin
+%\setlength{\columnmarginhorizontal}{0.05\paperheight}
+% Horizontal margin for the main column
+%\setlength{\maincolumnmarginvertical}{0.15\paperheight}
+% Vertical margin for the main column
+%\setlength{\maincolumnmarginhorizontal}{0.15\paperheight}
+
+%% Changing font sizes
+% Text font
+%\renewcommand{\fontsizestandard}{\fontsize{28}{35} \selectfont}
+% Main column font
+%\renewcommand{\fontsizemain}{\fontsize{28}{35} \selectfont}
+% Title font
+%\renewcommand{\fontsizetitle}{\fontsize{28}{35} \selectfont}
+% Author font
+%\renewcommand{\fontsizeauthor}{\fontsize{28}{35} \selectfont}
+% Section font
+%\renewcommand{\fontsizesection}{\fontsize{28}{35} \selectfont}
+
+%% Changing font sizes for a specific text segment
+% Place the text inside brackets:
+% {\fontsize{28}{35} \selectfont Your text goes here}
+
+%% Changing colours
+% Background of side columns
+%\renewcommand{\columnbackgroundcolor}{black}
+% Font of side columns
+%\renewcommand{\columnfontcolor}{gray}
+% Background of main column
+%\renewcommand{\maincolumnbackgroundcolor}{empirical}
+%\renewcommand{\maincolumnbackgroundcolor}{theory}
+%\renewcommand{\maincolumnbackgroundcolor}{methods}
+%\renewcommand{\maincolumnbackgroundcolor}{intervention}
+% Font of main column
+%\renewcommand{\maincolumnfontcolor}{gray}
