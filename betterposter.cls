@@ -249,7 +249,7 @@
 
 %% Coloured column command
 \newcommand{\vcolumn}[7]{%
-\parbox[s][#1][t]{#2}{%
+\parbox[t][#1][s]{#2}{%
 \noindent\colorbox{#3}{%
 {\color{#4}\centeredpage{#5}{#6}{#7}}%
 }%
@@ -259,7 +259,7 @@
 %% Coloured column command
 \newcommand{\hcolumn}[7]{%
 \begin{minipage}[t][\dimexpr #1][t]{#2}%
-\parbox[s][#1][t]{#2}{%
+\parbox[t][#1][s]{#2}{%
 \noindent\colorbox{#3}{%
 \begin{minipage}[t][
 \dimexpr 1.0\textheight\relax
