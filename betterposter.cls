@@ -25,9 +25,15 @@
 \geometry{margin=0in}
 
 \RequirePackage{ifxetex}
+\RequirePackage{ifluatex}
+
+\newif\ifxetexorluatex
+\ifxetex\xetexorluatextrue\else
+\ifluatex\xetexorluatextrue\else
+\xetexorluatexfalse\fi\fi
 
 %% Font
-\ifxetex
+\ifxetexorluatex
 \RequirePackage{cmbright}
 \RequirePackage[no-math]{fontspec}
 \setmainfont{Lato}
