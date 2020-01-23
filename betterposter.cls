@@ -24,10 +24,24 @@
 %% Remove default margins
 \geometry{margin=0in}
 
+\RequirePackage{ifxetex}
+\RequirePackage{ifluatex}
+
+\newif\ifxetexorluatex
+\ifxetex\xetexorluatextrue\else
+\ifluatex\xetexorluatextrue\else
+\xetexorluatexfalse\fi\fi
+
 %% Font
+\ifxetexorluatex
+\RequirePackage{cmbright}
+\RequirePackage[no-math]{fontspec}
+\setmainfont{Lato}
+\else
 \RequirePackage{cmbright}
 \RequirePackage[default]{lato}
 \RequirePackage[T1]{fontenc}
+\fi
 
 %% Small separation on enumerate and itemize
 \RequirePackage{enumitem}
